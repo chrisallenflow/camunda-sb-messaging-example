@@ -37,13 +37,16 @@ Throughout the process, script tasks send status updates to the console, so that
 
 For each message, there will be a source file for the following:
 
-- Source Interface.  This defines an output channel for publishing a message to a topic.
-- Sink Interface.  This defines an input channel for subscribing to a topic to receive messages.
-- Publisher class.  Implementation of Source interface.
-- Subscriber class.  Implementation of Sink interface.
-- Camunda Delegate classes that publish messages to the queue.  These classes will inject implementations of the defined Source interfaces, so make them available in the execute() method.
-- application.yaml.  This will associate topic names to defined channels.
-- messageExampleCollaboration.bpmn.  The collaboration diagram containing three processes.
+- **Source Interface.**  This defines an output channel for publishing a message to a topic.
+- **Sink Interface**.  This defines an input channel for subscribing to a topic to receive messages.
+- **Publisher class**.  Implementation of Source interface.
+- **Subscriber class**.  Implementation of Sink interface.
+
+Other notable source files:
+
+- **Camunda Delegate classes** that publish messages to the queue.  These classes will inject implementations of the defined Source interfaces, so make them available in the execute() method.
+- **application.yaml.**  This will associate topic names to defined channels.
+- **messageExampleCollaboration.bpmn**.  The collaboration diagram containing three processes.
 
 ## How to use it?
 
